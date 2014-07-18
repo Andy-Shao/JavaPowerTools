@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.hamcrest.Matchers;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class UseHamcrest {
@@ -30,7 +29,6 @@ public class UseHamcrest {
 		assertThat(color, is(not("white")));
 	}
 	
-	@Ignore
 	@Test
 	public void testHas(){
 		{
@@ -52,19 +50,27 @@ public class UseHamcrest {
 			assertThat(map, Matchers.<String,String>hasKey("color"));
 		}
 		
-		{
-			Object client = new Object(){
-				@SuppressWarnings("unused")
-                private String clientName;
+//		{
+//			UseHamcrest.Client client = this.new Client("Jane");
+//			
+//			assertThat(client, Matchers.hasProperty("clientName", is("Jane")));
+//		}
+	}
+	
+	@SuppressWarnings("unused")
+	private class Client{
+		private String clientName;
+		
+		public Client(String clientName) {
+			this.clientName = clientName;
+        }
 
-				public Object setClientName(String clientName) {
-                	this.clientName = clientName;
-                	return this;
-                }
-				
-			}.setClientName("Jane");
-			
-			assertThat(client, Matchers.hasProperty("clientName", is("Jane")));
-		}
+        public String getClientName() {
+        	return clientName;
+        }
+
+        public void setClientName(String clientName) {
+        	this.clientName = clientName;
+        }
 	}
 }

@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class ParameterTest {
+public class ParameterizedTest {
 
 	@Parameters
 	public static Collection<Object[]> data(){
@@ -23,7 +23,7 @@ public class ParameterTest {
 	private volatile int year;
 	private volatile double expectedTax;
 	
-	public ParameterTest(double input, int year, double expectedTax) {
+	public ParameterizedTest(double input, int year, double expectedTax) {
 		this.revenue = input;
 		this.year = year;
 		this.expectedTax = expectedTax;
