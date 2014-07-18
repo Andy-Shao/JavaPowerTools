@@ -7,6 +7,7 @@
 
 	<properties>
 		<junit-version>4.10</junit-version>
+		<hamcrest-all-version>1.1</hamcrest-all-version>
 	</properties>
 
 	<dependencies>
@@ -15,6 +16,12 @@
 			<artifactId>junit</artifactId>
 			<version>${junit-version}</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.hamcrest</groupId>
+		  <artifactId>hamcrest-all</artifactId>
+		  <version>${hamcrest-all-version}</version>
+		  <scope>test</scope>
 		</dependency>
 	</dependencies>
 
