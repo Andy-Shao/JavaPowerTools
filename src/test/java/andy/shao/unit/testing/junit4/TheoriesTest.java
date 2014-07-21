@@ -2,7 +2,7 @@ package andy.shao.unit.testing.junit4;
 
 import java.math.BigDecimal;
 
-//import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assume.assumeThat;
 import org.junit.experimental.theories.DataPoint;
@@ -35,5 +35,7 @@ public class TheoriesTest {
 		assumeThat(income, allOf(greaterThan(0.00), lessThan(14000.00)));
 		
 		System.out.println("year=" + year + ",income=" + income);
+		income -= 0.001;
+		assertThat(income, closeTo(income, 0.001));
 	}
 }
