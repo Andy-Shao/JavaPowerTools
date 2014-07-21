@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<uf_user user_id="1000" user_name="testUserName1000"/>
+<uf_user user_id="1001" user_name="testUserName1001"/>
+</dataset>
