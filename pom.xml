@@ -18,10 +18,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		  <groupId>org.hamcrest</groupId>
-		  <artifactId>hamcrest-all</artifactId>
-		  <version>${hamcrest-all-version}</version>
-		  <scope>test</scope>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>${hamcrest-all-version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
