@@ -22,7 +22,7 @@ public class DbUtil {
 	public static Connection getCon() throws SQLException{
 		Connection con = null;
 		
-		con = DriverManager.getConnection("");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","admin","123");
 		
 		return con;
 	}
